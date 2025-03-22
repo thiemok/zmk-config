@@ -1,0 +1,13 @@
+file_format: "1"
+id: dactyl5x6
+name: Dactyl 5x6
+type: shield
+url: https://github.com/abstracthat/dactyl-manuform
+requires:
+  - pro_micro
+features:
+  - keys
+  - studio
+siblings:
+  - dactyl5x6_left
+  - dactyl5x6_right

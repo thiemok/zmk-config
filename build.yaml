@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: ergodash_left
+    shield: dactyl5x6_left
   - board: nice_nano_v2
-    shield: ergodash_right
+    shield: dactyl5x6_right

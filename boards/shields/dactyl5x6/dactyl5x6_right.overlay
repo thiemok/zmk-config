@@ -1,0 +1,5 @@
+#include "dactyl5x6.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
