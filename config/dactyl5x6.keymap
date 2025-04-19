@@ -9,6 +9,11 @@
 #define ADJ 2
 
 / {
+
+	board_status: board_status {
+		compatible = "zmk,board-status-underglow"
+	}
+
 	macros {
 		all_mods: all_mods {
 			compatible = "zmk,behavior-macro";

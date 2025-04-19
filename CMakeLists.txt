@@ -1,0 +1,1 @@
+target_sources_ifdef(CONFIG_BOARD_STATUS_UNDERGLOW app PRIVATE src/board_status_underglow.c)
