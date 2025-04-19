@@ -1,0 +1,2 @@
+config BOARD_STATUS_UNDERGLOW
+    bool "Enable board status indication via underglow"
