@@ -10,8 +10,9 @@
 
 / {
 
-	board_status: board_status {
+	board_status {
 		compatible = "zmk,board-status-underglow";
+		active-layers = <ADJ>;
 	};
 
 	macros {

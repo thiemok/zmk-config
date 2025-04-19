@@ -5,4 +5,7 @@ description: Indicates board status via underglow
 
 compatible: "zmk,board-status-underglow"
 
-properties: {}
+properties:
+  active-layers:
+    type: array
+    required: true
