@@ -3,3 +3,6 @@ config SHIELD_DACTYL5X6_LEFT
 
 config SHIELD_DACTYL5X6_RIGHT
 	def_bool $(shields_list_contains,dactyl5x6_right)
+
+config SHIELD_DACTYL5X6_DONGLE
+	def_bool $(shields_list_contains,dactyl5x6_dongle)
