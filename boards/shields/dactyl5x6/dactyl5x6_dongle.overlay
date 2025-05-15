@@ -1,14 +1,49 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "dactyl5x6-layouts.dtsi"
+#include <dt-bindings/led/led.h>
 
 &physical_layout0 {
     transform = <&default_transform>;
+};
+
+/* Dummy led strip setup required for underglow to work */
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 5)>;
+        };
+    };
+};
+
+&spi3 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-names = "default";
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+
+        /* SPI */
+        reg = <0>; /* ignored, but necessary for SPI bindings */
+        spi-max-frequency = <4000000>;
+
+        /* WS2812 */
+        chain-length = <0>; /* number of LEDs */
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_ID_GREEN
+                         LED_COLOR_ID_RED
+                         LED_COLOR_ID_BLUE>;
+    };
 };
 
 / {
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
+        zmk,underglow = &led_strip;
     };
 
     mock_kscan: mock_kscan_0 {
