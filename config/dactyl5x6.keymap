@@ -35,7 +35,7 @@
 	                               &kp LBKT &kp RBKT                                                            &kp PLUS    &kp EQUAL
 	                                                &mt LSHIFT LPAR &kp SPACE           &kp RET     &mt RSHIFT RPAR
 	                                                &kp TAB         &kp HOME            &kp END     &kp DEL
-	                                                &kp LGUI        &kp LALT            &kp TILDE   &kp INS
+	                                                &kp LGUI        &kp LALT            &kp GRAVE   &kp INS
 	            >;
 	        };
 
